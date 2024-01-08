@@ -1,3 +1,4 @@
+import './index.css';
 import { useState, useEffect } from 'react'
 
 const App = () => {
@@ -24,14 +25,26 @@ const App = () => {
       <Form />
       <P bins={bins}/>
       <Table text={text}/>
+      <Footer />
     </div>
   )
 }
 
-const Header = () => {
-  return <h1>🦅 Team 5 Golden Eagles 🦅  ♻️♻️♻️</h1>
-}
+  const Header = () => {
+    return <h1>🤘 Hook &apos;em Requests 🤘</h1>
+  }
 
+
+  const Footer = () => {
+    return (
+      <footer>
+        Inspired by Request Bin<br />
+        Not Affiliated with UT Austin or the Texas Longhorns<br />
+        © {new Date().getFullYear()} Joshua W Lindsay
+      </footer>
+    )
+  }
+  
 const P = (props) => {
   console.log(props)
   return (
@@ -117,7 +130,7 @@ const Form = () => {
      method="post" action="http://localhost:3000/">
         {/* <label for="hook-url">Hook url: {props.url}</label><br></br> */}
 
-        <button type="submit">deploy</button>
+        <button type="submit">hook &apos;em 🤘</button>
       </form>   
   )
 }
